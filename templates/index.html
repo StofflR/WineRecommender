@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Recommender</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Garamond', serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f0e3 0%, #f5e6d3 50%, #fef5e7 100%);
+            min-height: 100vh;
+            color: #4a2c2a;
+        }
+        .container {
+            background: linear-gradient(to bottom, #ffffff, #fff9f0);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(139, 35, 50, 0.15);
+            border: 2px solid #c19a6b;
+            border-top: 4px solid #8b2332;
+        }
+        h1 {
+            color: #8b2332;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(139, 35, 50, 0.2);
+            font-family: 'Georgia', serif;
+        }
+        .subtitle {
+            text-align: center;
+            color: #a0826d;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #8b4513;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #c19a6b;
+            border-radius: 6px;
+            background-color: #ffffff;
+            color: #4a2c2a;
+            font-size: 15px;
+            font-family: 'Georgia', serif;
+            transition: all 0.3s ease;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #8b2332;
+            box-shadow: 0 0 10px rgba(139, 35, 50, 0.3);
+        }
+        button {
+            background: linear-gradient(135deg, #8b2332 0%, #a0314a 100%);
+            color: #ffffff;
+            padding: 14px 30px;
+            border: 2px solid #c19a6b;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #a0314a 0%, #8b2332 100%);
+            box-shadow: 0 4px 15px rgba(139, 35, 50, 0.4);
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            background: #d4c4b0;
+            cursor: not-allowed;
+            border-color: #c19a6b;
+            color: #999;
+            transform: none;
+        }
+        #loading {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: #8b4513;
+            font-weight: bold;
+        }
+        #loading.show {
+            display: block;
+        }
+        .spinner {
+            border: 4px solid rgba(193, 154, 107, 0.3);
+            border-top: 4px solid #8b2332;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 15px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #result-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(to bottom, #ffffff, #fef9f3);
+            border-radius: 8px;
+            border: 2px solid #c19a6b;
+            border-left: 4px solid #8b2332;
+            display: none;
+        }
+        #result-section.show {
+            display: block;
+        }
+        #result-section h3 {
+            color: #8b2332;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.8em;
+        }
+        #filter-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #c19a6b;
+            border-radius: 6px;
+            background-color: #ffffff;
+            color: #4a2c2a;
+            font-size: 15px;
+            font-family: 'Georgia', serif;
+        }
+        #filter-input:focus {
+            outline: none;
+            border-color: #8b2332;
+            box-shadow: 0 0 10px rgba(139, 35, 50, 0.3);
+        }
+        .autocomplete-container {
+            position: relative;
+            width: 100%;
+        }
+        .autocomplete-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, #ffffff, #fef9f3);
+            border: 2px solid #c19a6b;
+            border-top: none;
+            border-radius: 0 0 6px 6px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 4px 8px rgba(139, 69, 19, 0.15);
+        }
+        .autocomplete-suggestions.show {
+            display: block;
+        }
+        .autocomplete-item {
+            padding: 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #e8dcc0;
+            color: #4a2c2a;
+            font-family: 'Georgia', serif;
+        }
+        .autocomplete-item:hover {
+            background-color: #f5e6d3;
+            color: #4a2c2a;
+        }
+        .autocomplete-item:last-child {
+            border-bottom: none;
+        }
+        .autocomplete-highlight {
+            background-color: #8b2332;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        #wine-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        #wine-table th {
+            background: linear-gradient(135deg, #8b2332 0%, #a0314a 100%);
+            color: #ffffff;
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #c19a6b;
+        }
+        #wine-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e8dcc0;
+            color: #4a2c2a;
+            font-family: 'Georgia', serif;
+        }
+        #wine-table tr:hover {
+            background-color: #fef9f3;
+        }
+        #wine-table tbody tr:nth-child(even) {
+            background-color: #fefbf7;
+        }
+        #wine-table th:nth-child(1) {
+            width: 5%;
+            text-align: center;
+        }
+        #wine-table th:nth-child(2) {
+            width: 20%;
+        }
+        #wine-table th:nth-child(3) {
+            width: 45%;
+        }
+        #wine-table th:nth-child(4) {
+            width: 15%;
+        }
+        #wine-table th:nth-child(5) {
+            width: 15%;
+            text-align: right;
+        }
+        #wine-table td:nth-child(1) {
+            text-align: center;
+            font-weight: bold;
+            color: #8b2332;
+            font-size: 1.2em;
+        }
+        #wine-table td:nth-child(2) {
+            font-weight: bold;
+            color: #8b2332;
+        }
+        #wine-table td:nth-child(5) {
+            text-align: right;
+            font-weight: bold;
+            color: #4a2c2a;
+        }
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: #a0826d;
+            font-style: italic;
+            font-family: 'Georgia', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wine Recommender</h1>
+        <p class="subtitle">Discover Your Perfect Wine Match</p>
+        
+        <form id="myForm">
+            <div class="form-group">
+                <label for="text_input">Wine Preferences:</label>
+                <input type="text" id="text_input" name="text_input" placeholder="Describe your ideal wine... (e.g., full-bodied red, crisp white, sparkling)">
+            </div>
+            
+            <button type="submit" id="submitBtn">Get Recommendations</button>
+        </form>
+        
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Processing your request...</p>
+        </div>
+        
+        <div id="result-section">
+            <h3>Wine Recommendations:</h3>
+            <div class="autocomplete-container">
+                <input type="text" id="filter-input" placeholder="Filter by wine name or description..." autocomplete="off">
+                <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
+            </div>
+            <table id="wine-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Wine Name</th>
+                        <th>Description</th>
+                        <th>Country</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="wine-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let allWines = [];
+        let allKeywords = new Set();
+        
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading, hide result, disable button
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('result-section').classList.remove('show');
+            document.getElementById('submitBtn').disabled = true;
+            
+            const formData = new FormData(this);
+            
+            fetch('/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Hide loading, enable button
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('submitBtn').disabled = false;
+                
+                // Store wines data and populate table
+                allWines = data.wines;
+                extractKeywords();
+                populateTable(allWines);
+                
+                // Show result section
+                document.getElementById('result-section').classList.add('show');
+                
+                // Clear filter input
+                document.getElementById('filter-input').value = '';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Hide loading, enable button
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('submitBtn').disabled = false;
+                alert('An error occurred!');
+            });
+        });
+        
+        // Extract all unique keywords from wine data
+        function extractKeywords() {
+            allKeywords.clear();
+            allWines.forEach(wine => {
+                // Extract words from all fields
+                const text = [
+                    wine.name,
+                    wine.description,
+                    wine.country,
+                    wine.price
+                ].join(' ');
+                
+                // Split by word boundaries and extract meaningful words (3+ chars)
+                const words = text.toLowerCase()
+                    .split(/[\s,;.!?()]+/)
+                    .filter(word => word.length >= 3 && !/^\d+$/.test(word));
+                
+                words.forEach(word => allKeywords.add(word));
+            });
+        }
+        
+        // Filter functionality with sophisticated multi-term search
+        const filterInput = document.getElementById('filter-input');
+        const suggestionsContainer = document.getElementById('autocomplete-suggestions');
+        
+        filterInput.addEventListener('input', function(e) {
+            const filterText = e.target.value.toLowerCase().trim();
+            
+            // Update autocomplete suggestions
+            updateAutocomplete(filterText);
+            
+            if (filterText === '') {
+                populateTable(allWines);
+                return;
+            }
+            
+            // Split by spaces, commas, semicolons, pipes, and tabs
+            const searchTerms = filterText.split(/[\s,;|\t]+/).filter(term => term.length > 0);
+            
+            const filteredWines = allWines.filter(wine => {
+                // Combine all searchable fields into one string
+                const searchableText = [
+                    wine.rank.toString(),
+                    wine.name,
+                    wine.description,
+                    wine.country,
+                    wine.price
+                ].join(' ').toLowerCase();
+                
+                // Wine must match ALL search terms (AND logic)
+                return searchTerms.every(term => searchableText.includes(term));
+            });
+            
+            populateTable(filteredWines);
+        });
+        
+        // Update autocomplete suggestions
+        function updateAutocomplete(filterText) {
+            suggestionsContainer.innerHTML = '';
+            
+            if (filterText === '' || allKeywords.size === 0) {
+                suggestionsContainer.classList.remove('show');
+                return;
+            }
+            
+            // Get the last term being typed
+            const terms = filterText.split(/[\s,;|\t]+/);
+            const currentTerm = terms[terms.length - 1].toLowerCase();
+            
+            if (currentTerm.length < 2) {
+                suggestionsContainer.classList.remove('show');
+                return;
+            }
+            
+            // Find matching keywords
+            const matches = Array.from(allKeywords)
+                .filter(keyword => keyword.startsWith(currentTerm) && keyword !== currentTerm)
+                .sort()
+                .slice(0, 8); // Limit to 8 suggestions
+            
+            if (matches.length === 0) {
+                suggestionsContainer.classList.remove('show');
+                return;
+            }
+            
+            // Create suggestion items
+            matches.forEach(keyword => {
+                const item = document.createElement('div');
+                item.className = 'autocomplete-item';
+                
+                // Highlight the matching part
+                const highlightedText = keyword.replace(
+                    new RegExp(`^(${currentTerm})`, 'i'),
+                    '<span class="autocomplete-highlight">$1</span>'
+                );
+                item.innerHTML = highlightedText;
+                
+                item.addEventListener('click', function() {
+                    // Replace the current term with the selected keyword
+                    terms[terms.length - 1] = keyword;
+                    filterInput.value = terms.join(' ') + ' ';
+                    filterInput.focus();
+                    suggestionsContainer.classList.remove('show');
+                    
+                    // Trigger filter update
+                    filterInput.dispatchEvent(new Event('input'));
+                });
+                
+                suggestionsContainer.appendChild(item);
+            });
+            
+            suggestionsContainer.classList.add('show');
+        }
+        
+        // Hide suggestions when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.autocomplete-container')) {
+                suggestionsContainer.classList.remove('show');
+            }
+        });
+        
+        // Handle keyboard navigation
+        filterInput.addEventListener('keydown', function(e) {
+            const items = suggestionsContainer.querySelectorAll('.autocomplete-item');
+            if (items.length === 0) return;
+            
+            const activeItem = suggestionsContainer.querySelector('.autocomplete-item:hover');
+            let currentIndex = Array.from(items).indexOf(activeItem);
+            
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                currentIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
+                items[currentIndex].scrollIntoView({ block: 'nearest' });
+                // Trigger hover effect
+                items.forEach(item => item.style.backgroundColor = '');
+                items[currentIndex].style.backgroundColor = '#f5f5f5';
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+                items[currentIndex].scrollIntoView({ block: 'nearest' });
+                items.forEach(item => item.style.backgroundColor = '');
+                items[currentIndex].style.backgroundColor = '#f5f5f5';
+            } else if (e.key === 'Enter' && currentIndex >= 0) {
+                e.preventDefault();
+                items[currentIndex].click();
+            } else if (e.key === 'Escape') {
+                suggestionsContainer.classList.remove('show');
+            }
+        });
+        
+        function populateTable(wines) {
+            const tbody = document.getElementById('wine-table-body');
+            tbody.innerHTML = '';
+            
+            if (wines.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="no-results">No wines found matching your filter.</td></tr>';
+                return;
+            }
+            
+            wines.forEach(wine => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${wine.rank}</td>
+                    <td><strong>${wine.name}</strong></td>
+                    <td>${wine.description}</td>
+                    <td>${wine.country}</td>
+                    <td>${wine.price}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
