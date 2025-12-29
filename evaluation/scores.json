@@ -1,0 +1,131 @@
+{
+    "queries": [
+        {
+            "query": "premium cherry wine",
+            "baseline": [
+                {
+                    "id": 10195,
+                    "model": "random_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "id": 109445,
+                    "model": "random_baseline",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "id": 54457,
+                    "model": "random_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "id": 9633,
+                    "model": "random_baseline",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "id": 47853,
+                    "model": "random_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "id": 80452,
+                    "model": "random_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "id": 6734,
+                    "model": "random_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "id": 10812,
+                    "model": "random_baseline",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "id": 101848,
+                    "model": "random_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "id": 12479,
+                    "model": "random_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "id": 24208,
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "id": 109538,
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "id": 77733,
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "id": 49274,
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "id": 23874,
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "id": 47932,
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "id": 80158,
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "id": 84241,
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "id": 86158,
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "id": 58235,
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        }
+    ]
+}
