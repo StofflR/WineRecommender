@@ -126,6 +126,641 @@
                     "score": "1"
                 }
             ]
+        },
+        {
+            "query": "premium berry wine",
+            "baseline": [
+                {
+                    "id": 23173,
+                    "model": "random_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "id": 81965,
+                    "model": "random_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "id": 495,
+                    "model": "random_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "id": 15027,
+                    "model": "random_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "id": 125649,
+                    "model": "random_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "id": 37308,
+                    "model": "random_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "id": 92337,
+                    "model": "random_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "id": 11852,
+                    "model": "random_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "id": 102886,
+                    "model": "random_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "id": 124767,
+                    "model": "random_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "id": 24208,
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "id": 109538,
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "id": 77733,
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "id": 49274,
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "id": 23874,
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "id": 47932,
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "id": 80158,
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "id": 84241,
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "id": 86158,
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "id": 58235,
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ]
+        },
+        {
+            "query": "affordable french Bordeaux",
+            "baseline": [
+                {
+                    "id": 69934,
+                    "model": "random_baseline",
+                    "rank": 1,
+                    "score": null
+                },
+                {
+                    "id": 115639,
+                    "model": "random_baseline",
+                    "rank": 2,
+                    "score": null
+                },
+                {
+                    "id": 18620,
+                    "model": "random_baseline",
+                    "rank": 3,
+                    "score": null
+                },
+                {
+                    "id": 88889,
+                    "model": "random_baseline",
+                    "rank": 4,
+                    "score": null
+                },
+                {
+                    "id": 107411,
+                    "model": "random_baseline",
+                    "rank": 5,
+                    "score": null
+                },
+                {
+                    "id": 2191,
+                    "model": "random_baseline",
+                    "rank": 6,
+                    "score": null
+                },
+                {
+                    "id": 119025,
+                    "model": "random_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "id": 79098,
+                    "model": "random_baseline",
+                    "rank": 8,
+                    "score": null
+                },
+                {
+                    "id": 101043,
+                    "model": "random_baseline",
+                    "rank": 9,
+                    "score": null
+                },
+                {
+                    "id": 83827,
+                    "model": "random_baseline",
+                    "rank": 10,
+                    "score": null
+                }
+            ],
+            "model": [
+                {
+                    "id": 14185,
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": null
+                },
+                {
+                    "id": 126208,
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": null
+                },
+                {
+                    "id": 25453,
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": null
+                },
+                {
+                    "id": 126219,
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": null
+                },
+                {
+                    "id": 51409,
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": null
+                },
+                {
+                    "id": 84740,
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": null
+                },
+                {
+                    "id": 101376,
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": null
+                },
+                {
+                    "id": 98902,
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": null
+                },
+                {
+                    "id": 119201,
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": null
+                },
+                {
+                    "id": 51408,
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": null
+                }
+            ]
+        },
+        {
+            "query": "affordable french Bordeaux",
+            "baseline": [
+                {
+                    "id": 69934,
+                    "model": "random_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "id": 115639,
+                    "model": "random_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "id": 18620,
+                    "model": "random_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "id": 88889,
+                    "model": "random_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "id": 107411,
+                    "model": "random_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "id": 2191,
+                    "model": "random_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "id": 119025,
+                    "model": "random_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "id": 79098,
+                    "model": "random_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "id": 101043,
+                    "model": "random_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "id": 83827,
+                    "model": "random_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "id": 14185,
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "id": 126208,
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "id": 25453,
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "id": 126219,
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "id": 51409,
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "id": 84740,
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "id": 101376,
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "id": 98902,
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "id": 119201,
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "id": 51408,
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ]
+        },
+        {
+            "query": "dry spanish wine",
+            "baseline": [
+                {
+                    "id": 7286,
+                    "model": "random_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "id": 28363,
+                    "model": "random_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "id": 92433,
+                    "model": "random_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "id": 62802,
+                    "model": "random_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "id": 120086,
+                    "model": "random_baseline",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "id": 104766,
+                    "model": "random_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "id": 191,
+                    "model": "random_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "id": 102026,
+                    "model": "random_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "id": 63861,
+                    "model": "random_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "id": 85749,
+                    "model": "random_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "id": 44845,
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "id": 65139,
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "id": 85745,
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "id": 125014,
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "id": 85556,
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "id": 73923,
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "id": 103771,
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "id": 25929,
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "id": 32354,
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "id": 28437,
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "new zealand Sauvignon Blanc",
+            "baseline": [
+                {
+                    "id": 106857,
+                    "model": "random_baseline",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "id": 68441,
+                    "model": "random_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "id": 35146,
+                    "model": "random_baseline",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "id": 94170,
+                    "model": "random_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "id": 97499,
+                    "model": "random_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "id": 36285,
+                    "model": "random_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "id": 41787,
+                    "model": "random_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "id": 105476,
+                    "model": "random_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "id": 51271,
+                    "model": "random_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "id": 76485,
+                    "model": "random_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "id": 122898,
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "id": 25466,
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "id": 62395,
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "id": 104955,
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "id": 118975,
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "id": 6114,
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "id": 18989,
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "id": 62126,
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "id": 110081,
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "id": 93890,
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ]
         }
     ]
 }
