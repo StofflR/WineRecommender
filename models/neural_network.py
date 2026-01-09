@@ -40,7 +40,11 @@ class WineRecommenderNN(nn.Module):
             nn.ReLU(),
             nn.BatchNorm1d(hidden_dim),
             nn.Dropout(0.3),
-            nn.Linear(hidden_dim, hidden_dim // 2),
+            nn.Linear(hidden_dim, hidden_dim * 3 // 4),
+            nn.ReLU(),
+            nn.BatchNorm1d(hidden_dim * 3 // 4),
+            nn.Dropout(0.2),
+            nn.Linear(hidden_dim * 3 // 4, hidden_dim // 2),
             nn.ReLU(),
             nn.BatchNorm1d(hidden_dim // 2),
             nn.Dropout(0.2),
@@ -52,19 +56,18 @@ class WineRecommenderNN(nn.Module):
             nn.Linear(output_dim, hidden_dim // 2),
             nn.ReLU(),
             nn.BatchNorm1d(hidden_dim // 2),
-            nn.Linear(hidden_dim // 2, hidden_dim),
+            nn.Linear(hidden_dim // 2, hidden_dim * 3 // 4),
+            nn.ReLU(),
+            nn.BatchNorm1d(hidden_dim * 3 // 4),
+            nn.Linear(hidden_dim * 3 // 4, hidden_dim),
             nn.ReLU(),
             nn.BatchNorm1d(hidden_dim),
             nn.Linear(hidden_dim, input_dim),
         )
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print(f"Using device: {self.device}")
         self.to(self.device)
-
-        print(f"Model initialized on device: {self.device}")
-        print(
-            f"Architecture: {input_dim} -> {hidden_dim} -> {hidden_dim//2} -> {output_dim}"
-        )
 
     def forward(self, x):
         """
@@ -135,7 +138,7 @@ class WineRecommenderNN(nn.Module):
         optimizer = optim.Adam(self.parameters(), lr=learning_rate, weight_decay=1e-5)
         criterion = nn.MSELoss()
         scheduler = optim.lr_scheduler.ReduceLROnPlateau(
-            optimizer, mode="min", factor=0.5, patience=5, verbose=verbose
+            optimizer, mode="min", factor=0.5, patience=5
         )
 
         # Track loss history
@@ -234,6 +237,12 @@ if __name__ == "__main__":
     print("Training Wine Recommender Neural Network on real data...")
     print("=" * 60)
 
+    HIDDEN_DIM = 512
+    OUTPUT_DIM = 64
+    EPOCHS = 500
+    BATCH_SIZE = 256
+    LEARNING_RATE = 0.0005
+
     # Load the real data
     data_dir = Path(__file__).parent / "data"
     plot_dir = Path(__file__).parent / "plots"
@@ -249,56 +258,64 @@ if __name__ == "__main__":
 
     # Initialize model with actual dimensions
     input_dim = feature_vectors.shape[1]
-    model = WineRecommenderNN(input_dim=input_dim, hidden_dim=512, output_dim=64)
+    model = WineRecommenderNN(
+        input_dim=input_dim, hidden_dim=HIDDEN_DIM, output_dim=OUTPUT_DIM
+    )
+
+    # Create architecture-specific subdirectory name
+    arch_name = f"{HIDDEN_DIM}-{HIDDEN_DIM * 3 // 4}-{HIDDEN_DIM // 2}-{OUTPUT_DIM}"
+    print(f"Architecture: {arch_name}")
 
     # Train model on real data
     print("\n" + "=" * 60)
     print("Training on real wine TF-IDF features...")
     print("=" * 60)
     loss_history = model.train_model(
-        feature_vectors, epochs=150, batch_size=256, learning_rate=0.001, verbose=True
+        feature_vectors,
+        epochs=EPOCHS,
+        batch_size=BATCH_SIZE,
+        learning_rate=LEARNING_RATE,
+        verbose=True,
     )
 
     # Plot training loss
     print("\n" + "=" * 60)
     print("Plotting training loss...")
     plt.figure(figsize=(10, 6))
-    plt.plot(range(1, len(loss_history) + 1), loss_history, "b-", linewidth=2)
+    # Omit the first value to avoid large initial loss skewing the plot
+    plt.plot(range(2, len(loss_history) + 1), loss_history[1:], "b-", linewidth=2)
     plt.xlabel("Epoch", fontsize=12)
     plt.ylabel("Loss (MSE)", fontsize=12)
     plt.title("Training Loss Over Time", fontsize=14, fontweight="bold")
     plt.grid(True, alpha=0.3)
     plt.tight_layout()
 
-    # Save plot
-    plot_path = plot_dir / "training_loss.png"
+    # Save plot in architecture-specific subdirectory with learning rate folder
+    lr_folder = f"lr{str(LEARNING_RATE).replace('0.', '')}"
+    arch_plot_dir = plot_dir / lr_folder / arch_name
+    arch_plot_dir.mkdir(exist_ok=True, parents=True)
+    plot_path = arch_plot_dir / "training_loss.png"
     plt.savefig(plot_path, dpi=150, bbox_inches="tight")
     print(f"Loss plot saved to: {plot_path}")
     plt.close()
 
-    # Save trained model
+    # Save trained model in architecture-specific subdirectory
     print("\n" + "=" * 60)
-    trained_dir = Path(__file__).parent / "trained"
-    trained_dir.mkdir(exist_ok=True)
+    trained_dir = Path(__file__).parent / "trained" / arch_name
+    trained_dir.mkdir(exist_ok=True, parents=True)
     model_path = trained_dir / "wine_nn_model.pkl"
     model.save_model(str(model_path))
 
-    # Generate embeddings for all wines
-    print("\n" + "=" * 60)
-    print("Generating embeddings for all wines...")
     embeddings = model.get_embeddings(feature_vectors)
-    print(f"Embeddings shape: {embeddings.shape}")
 
     # Test load functionality
     print("\n" + "=" * 60)
     print("Testing model load...")
-    model2 = WineRecommenderNN(input_dim=input_dim, hidden_dim=512, output_dim=64)
+    model2 = WineRecommenderNN(
+        input_dim=input_dim, hidden_dim=HIDDEN_DIM, output_dim=OUTPUT_DIM
+    )
     model2.load_model(str(model_path))
 
     # Verify embeddings are consistent
     embeddings2 = model2.get_embeddings(feature_vectors[:100])
     print(f"Embeddings match after load: {np.allclose(embeddings[:100], embeddings2)}")
-
-    print("\n" + "=" * 60)
-    print("Training complete! Model saved to:", model_path)
-    print("=" * 60)

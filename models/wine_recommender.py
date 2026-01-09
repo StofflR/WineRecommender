@@ -3,16 +3,18 @@ Wine Recommender Model
 Handles wine recommendation logic using neural network and TF-IDF
 """
 
-import os
+import re
 import pickle
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.feature_extraction.text import TfidfVectorizer
 from pathlib import Path
 
 # Import neural network
 from models.neural_network import WineRecommenderNN
+
+# Import keywords from single source of truth
+from models.keywords import country_keywords, price_keywords, flavor_keywords
 
 # Global variables for loaded data
 df_wines = None
@@ -21,16 +23,43 @@ vectorizer = None
 nn_model = None
 wine_embeddings = None
 
+# Global keyword dictionaries (initialized in load_data)
+unique_varieties = []
+normalized_unique_varieties = []
+unique_regions = []
+normalized_unique_regions = []
+unique_wineries = []
+normalized_unique_wineries = []
 
-def load_data():
+
+def load_data(hidden_dim=512, output_dim=64):
     """Load preprocessed data from models/data directory"""
     global df_wines, feature_vectors, vectorizer, nn_model, wine_embeddings
+    global unique_varieties, normalized_unique_varieties
+    global unique_regions, normalized_unique_regions
+    global unique_wineries, normalized_unique_wineries
 
     data_dir = Path(__file__).parent / "data"
 
     # Load cleaned wine data
     df_wines = pd.read_csv(data_dir / "cleaned_wine_data.csv")
     print(f"Loaded {len(df_wines)} wines")
+
+    # Extract unique values from dataset
+    unique_varieties = df_wines["variety"].unique().tolist()
+    normalized_unique_varieties = [
+        re.sub(r"[ -]", "_", variety) for variety in unique_varieties
+    ]
+
+    unique_regions = df_wines["region_1"].unique().tolist()
+    normalized_unique_regions = [
+        re.sub(r"[ -]", "_", region) for region in unique_regions
+    ]
+
+    unique_wineries = df_wines["winery"].unique().tolist()
+    normalized_unique_wineries = [
+        re.sub(r"[ -]", "_", winery) for winery in unique_wineries
+    ]
 
     # Load feature vectors
     with open(data_dir / "feature_vectors.pkl", "rb") as f:
@@ -44,9 +73,12 @@ def load_data():
 
     # Try to load trained neural network
     trained_model_path = Path(__file__).parent / "trained" / "wine_nn_model.pkl"
+    print(f"Loading trained model from {trained_model_path}")
     if trained_model_path.exists():
         nn_model = WineRecommenderNN(
-            input_dim=feature_vectors.shape[1], hidden_dim=512, output_dim=64
+            input_dim=feature_vectors.shape[1],
+            hidden_dim=hidden_dim,
+            output_dim=output_dim,
         )
         nn_model.load_model(str(trained_model_path))
 
@@ -104,61 +136,72 @@ def clean_user_input(text_input):
 
     text_lower = text_input.lower().strip()
 
+    # Split into words for multi-word matching
+    words = text_lower.split()
+
+    # Generate word combinations (single, two-word, three-word phrases)
+    two_words = [words[i] + "_" + words[i + 1] for i in range(len(words) - 1)]
+    three_words = [
+        words[i] + "_" + words[i + 1] + "_" + words[i + 2]
+        for i in range(len(words) - 2)
+    ]
+
     # Extract potential wine attributes
     cleaned_terms = []
 
-    # Common wine varieties (subset - extend as needed)
-    varieties = [
-        "chardonnay",
-        "cabernet",
-        "merlot",
-        "pinot",
-        "noir",
-        "sauvignon",
-        "blanc",
-        "riesling",
-        "shiraz",
-        "syrah",
-        "malbec",
-        "zinfandel",
-    ]
+    for country, value in country_keywords.items():
+        for keyword in value:
+            for word in words:
+                if word == keyword:
+                    cleaned_terms.append("country_" + country)
 
-    # Countries
-    countries = [
-        "france",
-        "italy",
-        "spain",
-        "usa",
-        "america",
-        "american",
-        "australia",
-        "argentina",
-        "chile",
-        "germany",
-        "portugal",
-        "new zealand",
-    ]
+    for flavor, value in flavor_keywords.items():
+        for keyword in value:
+            for word in words:
+                if word == keyword:
+                    cleaned_terms.append("flavor_" + flavor)
 
-    # Price categories
-    price_terms = ["budget", "cheap", "affordable", "expensive", "premium", "luxury"]
+    for price, value in price_keywords.items():
+        for keyword in value:
+            for word in words:
+                if word == keyword:
+                    cleaned_terms.append("pricecat_" + price)
+            for pair in two_words:
+                if pair == keyword:
+                    cleaned_terms.append("pricecat_" + price)
 
-    # Add prefixes for structured features
-    for variety in varieties:
-        if variety in text_lower:
-            cleaned_terms.append(f"variety_{variety}")
+    for variety in normalized_unique_varieties:
+        for word in words:
+            if word == variety.lower():
+                cleaned_terms.append("variety_" + word)
+        for pair in two_words:
+            if pair == variety.lower():
+                cleaned_terms.append("variety_" + pair)
+        for triple in three_words:
+            if triple == variety.lower():
+                cleaned_terms.append("variety_" + triple)
 
-    for country in countries:
-        if country in text_lower:
-            cleaned_terms.append(f"country_{country}")
+    for region in normalized_unique_regions:
+        for word in words:
+            if word == region.lower():
+                cleaned_terms.append("region_" + word)
+        for pair in two_words:
+            if pair == region.lower():
+                cleaned_terms.append("region_" + pair)
+        for triple in three_words:
+            if triple == region.lower():
+                cleaned_terms.append("region_" + triple)
 
-    for price_term in price_terms:
-        if price_term in text_lower:
-            if price_term in ["budget", "cheap", "affordable"]:
-                cleaned_terms.append("pricecat_budget")
-            elif price_term in ["expensive", "premium", "luxury"]:
-                cleaned_terms.append("pricecat_premium")
-            else:
-                cleaned_terms.append("pricecat_mid_range")
+    for winery in normalized_unique_wineries:
+        for word in words:
+            if word == winery.lower():
+                cleaned_terms.append("winery_" + word)
+        for pair in two_words:
+            if pair == winery.lower():
+                cleaned_terms.append("winery_" + pair)
+        for triple in three_words:
+            if triple == winery.lower():
+                cleaned_terms.append("winery_" + triple)
 
     return " ".join(cleaned_terms) if cleaned_terms else text_lower
 
@@ -178,25 +221,6 @@ def extract_flavor_features(text_input):
 
     text_lower = text_input.lower()
     flavor_terms = []
-
-    # Define flavor keywords (same as in training)
-    flavor_keywords = {
-        "fruit": [
-            "berry",
-            "cherry",
-            "apple",
-            "citrus",
-            "tropical",
-            "fruit",
-            "blackberry",
-            "raspberry",
-        ],
-        "dry": ["dry", "crisp", "tannic"],
-        "sweet": ["sweet", "honey", "ripe", "jam"],
-        "oak": ["oak", "vanilla", "toast", "cedar"],
-        "spice": ["spice", "pepper", "cinnamon", "clove"],
-        "herbal": ["herbal", "grass", "mineral", "earth"],
-    }
 
     # Check flavor type in description
     for flavor_type, keywords in flavor_keywords.items():
@@ -246,9 +270,10 @@ def get_wine_recommendations(text_input, top_n=7):
                 "name": (
                     wine["title"] if "title" in wine else wine.get("variety", "Unknown")
                 ),
-                "description": wine.get("description", "No description available")[:200]
-                + "...",
+                "description": wine.get("description", "No description available"),
                 "country": wine.get("country", "Unknown"),
+                "region": wine.get("region_1", wine.get("region_2", "Unknown")),
+                "variety": wine.get("variety", "Unknown"),
                 "price": (
                     f"${int(wine['price'])}" if pd.notna(wine.get("price")) else "N/A"
                 ),
@@ -256,46 +281,3 @@ def get_wine_recommendations(text_input, top_n=7):
         )
 
     return recommendations
-
-
-def main():
-    """Main function to train and save the neural network model"""
-    print("Loading data...")
-    load_data()
-
-    print("\nInitializing neural network...")
-    model = WineRecommenderNN(
-        input_dim=feature_vectors.shape[1], hidden_dim=512, output_dim=64
-    )
-
-    print("\nTraining neural network...")
-    model.train_model(
-        feature_vectors, epochs=50, batch_size=128, learning_rate=0.001, verbose=True
-    )
-
-    # Save trained model
-    trained_dir = Path(__file__).parent / "trained"
-    model.save_model(str(trained_dir / "wine_nn_model.pkl"))
-
-    print("\nTraining complete! Model saved to models/trained/wine_nn_model.pkl")
-
-    # Test recommendations
-    print("\n" + "=" * 50)
-    print("Testing recommendations...")
-    print("=" * 50)
-
-    test_queries = [
-        "I like fruity red wines from France",
-        "Looking for a crisp white wine",
-        "Premium Italian wine with oak flavors",
-    ]
-
-    for query in test_queries:
-        print(f"\nQuery: '{query}'")
-        recs = get_wine_recommendations(query, top_n=3)
-        for rec in recs:
-            print(f"  {rec['rank']}. {rec['name']} - {rec['country']} ({rec['price']})")
-
-
-if __name__ == "__main__":
-    main()
