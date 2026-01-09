@@ -1,0 +1,8 @@
+> Open scoring.ipynb
+> Run section Data Structures
+> In section Baseline, manually insert query.
+> Run section Baseline
+> Run section Model (this will get the 10 first results from the model once it exists, not yet implemented)
+> Run section Scoring
+> Give each wine a result from 0 (doesn't fit to the query) to 3 (completely fits with the query), use exit to cancel the scoring (the results recorded for this query so far will be lost)
+> Backup the scores.json every once in a while so nothing gets lost
