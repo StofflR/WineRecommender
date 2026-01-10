@@ -197,9 +197,7 @@ class WineRecommenderNN(nn.Module):
             "output_dim": self.output_dim,
         }
 
-        with open(filepath, "wb") as f:
-            pickle.dump(model_data, f)
-
+        torch.save(model_data, filepath)
         print(f"Model saved to {filepath}")
 
     def load_model(self, filepath):
@@ -209,8 +207,7 @@ class WineRecommenderNN(nn.Module):
         Args:
             filepath (str): Path to the saved model
         """
-        with open(filepath, "rb") as f:
-            model_data = pickle.load(f)
+        model_data = torch.load(filepath, map_location=self.device, weights_only=False)
 
         # Verify dimensions match
         if (
@@ -303,7 +300,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 60)
     trained_dir = Path(__file__).parent / "trained" / arch_name
     trained_dir.mkdir(exist_ok=True, parents=True)
-    model_path = trained_dir / "wine_nn_model.pkl"
+    model_path = trained_dir / "wine_nn_model.pt"
     model.save_model(str(model_path))
 
     embeddings = model.get_embeddings(feature_vectors)
