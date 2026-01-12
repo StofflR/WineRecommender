@@ -1,0 +1,3179 @@
+{
+    "queries": [
+        {
+            "query": "fruity with the flavour of berries from italy",
+            "baseline": [
+                {
+                    "title": "Vite Colte 2015 Masseria dei Carmelitani  (Gavi)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Donnachiara 2009 Falanghina (Beneventano)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Domaine Ren\u00e9 Bouvier 2014 Clos du Roy  (Marsannay)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Sineann 2010 Old Vine Zinfandel (Columbia Valley (OR))",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Talamonti 2012 Trabocchetto Pecorino (Colline Pescaresi)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Ciavolich 2016 Donna Ernestina Rosato (Colline Pescaresi)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Novy 2009 Zinfandel (Russian River Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Domaine Fran\u00e7ois Schmitt 2012 Riesling (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Principessa Gavia 2005  Gavi",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Sorrentino 2009 Versacrum Gragnano (Penisola Sorrentina)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "3"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Pieve Vecchia 2010 Campo del Noce Vermentino (Montecucco)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "La Piasola 2012  Gavi",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "La Vis 2013 Sette Fontane Nosiola (Trentino)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "La Scolca 2015 Black Label  (Gavi)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "La Canosa 2008 Servator Passerina (Marche)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "La Scolca 2009 90 Years White Label  (Gavi)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "La Vis 2014 Simboli M\u00fcller-Thurgau (Trentino)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "La Casa Dell'Orco 2009 Falanghina (Beneventano)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "La Scolca 2015 White Label  (Gavi)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "La Corte 2006 La Corte Solyss Negroamaro (Puglia)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "3"
+                }
+            ]
+        },
+        {
+            "query": "an austrian wine that has a fresh acidity",
+            "baseline": [
+                {
+                    "title": "Tam\u00e1s Estates 1999 AVA's: San Francisco Bay/Livermore Valley Zinfandel (California)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Tzuba 2009 Metzuda Red (Judean Hills)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Tement 2015 Steirische Klassik Weissburgunder (S\u00fcdsteiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Montemercurio 2009 Messaggero  (Vino Nobile di Montepulciano)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "St. Urbans-Hof 2012 Ockfener Bockstein Erste Lage Sp\u00e4tlese Riesling (Mosel)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Neumeister 2014 Steirische Klassik Grauburgunder (S\u00fcdoststeiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Weingut Christ 2015 Gelber Muskateller (Vienna)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Netzl 2013 B\u00e4rnreiser Weissburgunder (Carnuntum)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Netzl 2013 B\u00e4rnreiser Weissburgunder (Carnuntum)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Neumeister 2013 Steirische Klassik Morillon (S\u00fcdoststeiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Netzl 2014 Rubin Carnuntum Zweigelt (Carnuntum)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Neumeister 2011 Steintal Roter Traminer (S\u00fcdoststeiermark)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "title": "Lackner Tinnacher 2011 Gelber Muskateller (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Wohlmuth 2014 Steinriegl Gelber Muskateller (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Neumeister 2011 Steirische Klassik Grauburgunder (S\u00fcdoststeiermark)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Lackner Tinnacher 2014 Welschriesling (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Biegler 2015 Brindlbach Rotgipfler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "title": "Stadlmann 2009 Tagelsteiner Rotgipfler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "3"
+                },
+                {
+                    "title": "Kracher NV Zwischen den Seen Nummer 3 Kollektion L08A Rosenmuskateller (Austria)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Johanneshof Reinisch 2015 Satzing Zierfandler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "an Zweigelt wine that has a rich flavour",
+            "baseline": [
+                {
+                    "title": "Wilridge 2012 Estate Zweigelt (Naches Heights)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Wieninger 2014 Nussberg Gr\u00fcner Veltliner (Vienna)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Wilridge 2015 Estate Zweigelt (Naches Heights)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Enjingi 2009 Barrique Zweigelt (Kutjevo)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Artner 2014 Klassik Zweigelt (Carnuntum)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Schwarzb\u00f6ck 2014 Bisamberg Zweigelt (Vienna)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Hagafen 2010 Estate Cabernet Franc (Napa Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Ecker 2011 Zweigelt (Weinland \u00d6sterreich)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "3"
+                },
+                {
+                    "title": "Eschenhof Holzer 2014 Zweigelt (Wagram)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "3"
+                },
+                {
+                    "title": "Glatzer 2011 Rubin Carnuntum Zweigelt (Carnuntum)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "3"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Enjingi 2009 Barrique Zweigelt (Kutjevo)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Cave Geisse NV Cave Amadeu Moscatel (Pinto Bandeira)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Telavi 2009 Satrapezo 10 Qvevri Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Vino z Czech 2011 Welschriesling (Moravia)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Bolney Wine Estate 2014 Blanc de Blancs Brut Chardonnay (England)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Bolney Wine Estate 2014 Blanc de Blancs Brut Chardonnay (England)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Kindzmarauli Marani 2014 Kisi (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Turasan 2015 Emir (Cappadocia)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Pheasant's Tears 2009 Dry Unfiltered Amber Wine Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Turasan 2014 Emir (Turkey)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "intense red color and a complex bouquet with flavors of mature fruit and spicy notes",
+            "baseline": [
+                {
+                    "title": "Domaine Marcel Deiss 2012 Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Domaine Gresser 2013 Kritt Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Citation 2004 Pinot Noir (Oregon)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Dr. H. Thanisch (Erben M\u00fcller-Burggraef) 2013 Brauneberger Juffer-Sonnenuhr Sp\u00e4tlese Riesling (Mosel)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Domaine Riefl\u00e9-Landmann 2013 Seppi Landmann Vall\u00e9e Noble Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Domaine Ehrhart 2013 Domaine Saint-R\u00e9my Herrenweg Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Dalton 2012 Oak Aged Cabernet Sauvignon (Galilee)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Cusumano 2012 S\u00e0gana Tenuta San Giacomo Nero d'Avola (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "3"
+                },
+                {
+                    "title": "COS 2013 Frappato (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "3"
+                },
+                {
+                    "title": "Caves Transmontanas 2006 V\u00e9rtice Pinot Noir (Douro)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Th\u00f6rle 2011 Saulheimer H\u00f6lle Trockenbeerenauslese Riesling (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Tenuta Roveglia 2011 Vigne di Catullo  (Lugana)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Peter Mertes 2015 Platinum Sweet Red Dornfelder (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Weingut Georg Albrecht Schneider 2015 Niersteiner Hipping Auslese Riesling (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Leonard Kreusch 2016 Riesling (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Weingut Georg Albrecht Schneider 2015 Niersteiner Hipping Auslese Riesling (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Perla del Garda 2011 Vendemmia Tardiva  (Lugana)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "G&M; Machmer 2008 Bechtheimer Stein Sp\u00e4tlese Gew\u00fcrztraminer (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Th\u00f6rle 2013 Saulheimer R\u00e9serve Trocken Chardonnay (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Louis Guntrum 2015 Nierstein Bergkirche Kabinett Riesling (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "organic wine aged in amphora notes of oak",
+            "baseline": [
+                {
+                    "title": "\u0160toka 2011 Grganja Vitovska (Kras)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Kindzmarauli Marani 2014 Rkatsiteli (Kakheti)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Suvla 2012 Kinali Yapincak (Thrace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Valter Sirk 2010 Malvazija Malvasia Istriana (Goriska Brda)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Valter Sirk 2010 Malvazija Malvasia Istriana (Goriska Brda)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Haak 2010 Thomas Jefferson Series Madeira Jacquez (Texas)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Haak 2011 Madeira Jacquez (Texas)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Market Vineyards 2010 Arbitrage Cabernet Sauvignon (Columbia Valley (WA))",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Huber 2005 Hecklinger Schlossberg R Trocken Sp\u00e4tburgunder (Baden)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "LangeTwins 2014 Estate Grown Chardonnay (Clarksburg)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Familia Deicas 2006 1st Cru d'Exception Tannat (Juanico)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Telavi 2007 Marani Kondoli Vineyards Saperavi-Merlot (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Antigua Bodega Stagnari 2015 Pedregal Roble Tannat-Merlot (Canelones)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Telavi 2007 Satrapezo 10 Kvevri Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Monte Xanic 2011 Cabernet Blend Cabernet Sauvignon-Merlot (Valle de Guadalupe)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Valter Sirk 2010 Malvazija Malvasia Istriana (Goriska Brda)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Valter Sirk 2010 Malvazija Malvasia Istriana (Goriska Brda)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Terra Romana 2007 Cuv\u00e9e Charlotte Red (Dealu Mare)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Mount Pleasant Winery NV Dry Norton (Missouri)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Artesana 2015 Tannat (Canelones)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ]
+        },
+        {
+            "query": "Wine ith vanilla and blackberry notes from france",
+            "baseline": [
+                {
+                    "title": "Kindzmarauli Marani 2014 Rkatsiteli (Kakheti)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Suvla 2012 Kinali Yapincak (Thrace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "\u0160toka 2011 Grganja Vitovska (Kras)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Valter Sirk 2010 Malvazija Malvasia Istriana (Goriska Brda)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Valter Sirk 2010 Malvazija Malvasia Istriana (Goriska Brda)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Haak 2010 Thomas Jefferson Series Madeira Jacquez (Texas)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Haak 2011 Madeira Jacquez (Texas)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Andre et Mireille Tissot 2006 Vin Jaune Savagnin (Arbois)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Market Vineyards 2010 Arbitrage Cabernet Sauvignon (Columbia Valley (WA))",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Cave de Tain 2015 Grand Classique Marsanne (Hermitage)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Andre et Mireille Tissot 2006 Vin Jaune Savagnin (Arbois)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "G\u00e9rard Bertrand 2009 Grenache-Syrah-Mourv\u00e8dre G-S-M (Corbi\u00e8res)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Vignobles de Balma Venitia 2011 Domaine du Paparotier  (Muscat de Beaumes de Venise)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Producteurs Plaimont 2004 Pl\u00e9nitude Tannat (Madiran)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Cave de Tain 2015 Nobles Rives Marsanne (Collines Rh\u00f4daniennes)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Cave de Tain 2015 Marsanne (Collines Rh\u00f4daniennes)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Cave de Tain 2015 Marsanne (Collines Rh\u00f4daniennes)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "M. Chapoutier 2001 Domaine de Bila-Haut Vin Doux Naturel Grenache (Rivesaltes)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "M. Chapoutier 2001 Domaine de Bila-Haut Vin Doux Naturel Grenache (Rivesaltes)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "G\u00e9rard Bertrand 2009 Grenache-Carignan (Fitou)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "ane expensive primitivo from italy, austria or france",
+            "baseline": [
+                {
+                    "title": "Miguel Torres 2009 Nectaria Vendimia Tardia Botrytis Riesling (Curic\u00f3 Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "A-Mano 2009 Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Antonio Caggiano 2007 FiaGre White (Campania)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Cielo e Terra 2011 Primi Soli Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Grandin NV Brut Sparkling (Vin Mousseux)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Fatalone 2007 Teres Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Gianfranco Fino 2012 Es  (Primitivo di Manduria)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "title": "Tommasi 2012 Masseria Surani Heracles Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Teanum 2012 Otre Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Torrevento 2012 Matervitae Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Kracher NV Zwischen den Seen Nummer 3 Kollektion L08A Rosenmuskateller (Austria)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Lackner Tinnacher 2011 Gelber Muskateller (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Neumeister 2011 Steintal Roter Traminer (S\u00fcdoststeiermark)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Neumeister 2011 Steirische Klassik Grauburgunder (S\u00fcdoststeiermark)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Lackner Tinnacher 2014 Welschriesling (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Wohlmuth 2014 Steinriegl Gelber Muskateller (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Netzl 2014 Rubin Carnuntum Zweigelt (Carnuntum)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Biegler 2015 Brindlbach Rotgipfler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Stadlmann 2009 Tagelsteiner Rotgipfler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Johanneshof Reinisch 2015 Satzing Zierfandler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "A dry Chianti with cherry notes",
+            "baseline": [
+                {
+                    "title": "Terra di Cipressi 2009 Sangiovese (Toscana)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Adzic 2015 Gra\u0161evina (Kutjevo)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Hugel 2006 Riesling (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Bastianich 2010 Adriatico Malvasia Istriana (Istria)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Bastianich 2010 Adriatico Malvasia Istriana (Istria)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Pullus 2008 g-Pullus Traminer (\u0160tajerska)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Korta Katarina 2009 Posip (Kor\u010dula)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Morell-Pe\u00f1a 2015 Ysabella Bjork Chardonnay (Columbia Valley (WA))",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Morell-Pe\u00f1a 2015 Ysabella Bjork Chardonnay (Columbia Valley (WA))",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Poggiotondo 2015  Chianti",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Poggiotondo 2015  Chianti",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Villa Mangiacane 2011 District Z Gran Selezione  (Chianti Classico)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Le Fonti 2010 Riserva  (Chianti Classico)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Cantine Ravazzi 2011 Riserva  (Chianti)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Uggiano 2009 Riserva  (Chianti)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Farnetella 2011 Riserva  (Chianti Colli Senesi)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Querciabella 2010  Chianti Classico",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Rocca di Montegrossi 2009 Vigneto San Marcellino  (Chianti Classico)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Podere La Cappella 2010  Chianti Classico",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Podere La Cappella 2010  Chianti Classico",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "A full-bodied Shiraz with pepper notes",
+            "baseline": [
+                {
+                    "title": "Kilikanoon 2008 Killerman's Run Shiraz-Grenache (Australia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Yalumba 2008 Shiraz-Viognier (Eden Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Sparkling Pointe NV Topaz Imp\u00e9rial Ros\u00e9  (North Fork of Long Island)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Domaine Terlato & Chapoutier 2007 Shiraz-Viognier (Victoria)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Darioush 2011 Signature Series Shiraz (Napa Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Margan 2007 Saign\u00e9e Ros\u00e9 Shiraz (Hunter Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Jinks Creek 2004 Longford Shiraz (Gippsland)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "title": "Yeringberg 2012 Shiraz (Yarra Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Stone Castle 2013 Shiraz",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Durbanville Hills 2005 Shiraz (Durbanville)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ],
+            "model": [
+                {
+                    "title": "9 Mile Road 2013 Shiraz (Langhorne Creek)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Eden Road 2010 Shiraz (Gundagai)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Eden Road 2010 Shiraz (Gundagai)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Eden Road 2010 The Long Road Shiraz (Gundagai)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Fowles Wine 2013 Farm to Table Shiraz (Victoria)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Ballast Stone Estate Wines 2007 Stonemason Shiraz (Currency Creek)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Jasper Hill 2005 Emily's Paddock Shiraz-Cabernet Franc Shiraz (Heathcote)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Penley Estate 2012 Special Select Shiraz (Coonawarra)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Penley Estate 2012 Special Select Shiraz (Coonawarra)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Fowles Wine 2009 Stone Dwellers Shiraz (Strathbogie Ranges)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "A structured Nebbiolo with floral aromas",
+            "baseline": [
+                {
+                    "title": "Wilridge 2013 Estate Wilridge Vineyard Nebbiolo (Naches Heights)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Wilridge 2012 Estate Nebbiolo (Naches Heights)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Demarie 2012 Nebbiolo (Langhe)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Mario Gagliasso 2008 Torriglione  (Barolo)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Carletto 2015  Montepulciano d'Abruzzo",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Principiano Ferdinando 2012 Nebbiolo (Langhe)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Travaglini 2001 Trevigne  (Gattinara)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Amalia 2013 Nebbiolo (Langhe)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Hermes 2006 Estate Bottled Nebbiolo (Ohio)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Gaja 2006 Costa Russi Nebbiolo (Langhe)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Il Chiosso 2008  Ghemme",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Paolo Scavino 2010 Nebbiolo (Langhe)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "title": "Fay 2009  Valtellina",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Giacomo Vico 2008 Nebbiolo (Langhe)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Cave Geisse NV Cave Amadeu Moscatel (Pinto Bandeira)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Telavi 2009 Satrapezo 10 Qvevri Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Vino z Czech 2011 Welschriesling (Moravia)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Tenuta La Marchesa 2008 Saula  (Gavi)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Poderi Colla 2012  Nebbiolo d'Alba",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Le Caniette 2010 Io sono Gaia non sono Lucrezia  (Offida Pecorino)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ]
+        },
+        {
+            "query": "A dry red wine with herbal",
+            "baseline": [
+                {
+                    "title": "Vino z Czech 2011 Rivaner (Moravia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Gravner 2007 Bianco Breg White (Venezia Giulia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Campolargo 2012 Alvarelh\u00e3o (Portuguese Table Wine)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Winkler-Hermaden 2007 Steierische Klassik Weissburgunder (S\u00fcdoststeiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Castle Rock 2010 Chardonnay (Russian River Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Sattlerhof 2014 Gamlitzer Morillon (S\u00fcdsteiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Pio Cesare 2008 Cortese di Gavi  (Cortese di Gavi)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Ferrandes 2004  Passito di Pantelleria",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Marrenon 2014 Les Grains Ros\u00e9 de Merlot (Mediterran\u00e9e)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "William F\u00e8vre 2013 Vaud\u00e9sir Grand Cru  (Chablis)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Iago's Wine 2010 Chardakhi White Dry With Skin Contact Unfiltered Chinuri (Georgia)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Benvenuti 2012 Malvasia Istriana (Istria)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Lee Family Farm 2010 Silvaspoons Vineyard Verdelho (Alta Mesa)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Our Wine 2015 Vineyard Tsarapi Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Montes Toscanini 2015 Criado en Roble Tannat (Canelones)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Montes Toscanini 2015 Criado en Roble Tannat (Canelones)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Neumeister 2016 Steirische Klassik Gelber Muskateller",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Neumeister 2016 Steirische Klassik Gelber Muskateller",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Castelvero 2008 Cortese (Piedmont)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Araldica 2008 La Luciana  (Gavi)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "An elegant Italian red with balanced acidity",
+            "baseline": [
+                {
+                    "title": "Vite Colte 2015 Masseria dei Carmelitani  (Gavi)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Donnachiara 2009 Falanghina (Beneventano)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Domaine Ren\u00e9 Bouvier 2014 Clos du Roy  (Marsannay)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Sineann 2010 Old Vine Zinfandel (Columbia Valley (OR))",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Talamonti 2012 Trabocchetto Pecorino (Colline Pescaresi)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Ciavolich 2016 Donna Ernestina Rosato (Colline Pescaresi)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Novy 2009 Zinfandel (Russian River Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Domaine Fran\u00e7ois Schmitt 2012 Riesling (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Principessa Gavia 2005  Gavi",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "3"
+                },
+                {
+                    "title": "Sorrentino 2009 Versacrum Gragnano (Penisola Sorrentina)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Tenuta La Marchesa 2008 Saula  (Gavi)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Ocone 2008 Greco (Taburno)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Cantine Rallo 2010 Beleda Catarratto (Alcamo)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Cantine Rallo 2010 Beleda Catarratto (Alcamo)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Cascina Bongiovanni 2006 Arneis (Langhe)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Tommasi 2007 Poggio al Tufo Vermentino (Maremma)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Cecchi 2008 Litorale Vermentino (Maremma)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Le Caniette 2010 Io sono Gaia non sono Lucrezia  (Offida Pecorino)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Ferrocinto 2015 Pollino Bianco Mantonico (Calabria)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "3"
+                },
+                {
+                    "title": "Ceretto 2009 Blang\u00e9 Arneis (Langhe)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "A juicy Grenache with strawberry notes",
+            "baseline": [
+                {
+                    "title": "Bibich 2009 G6 Grenache (Croatia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "G\u00e9rard Bertrand 2009 Grenache-Carignan (Fitou)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "M. Chapoutier 2001 Domaine de Bila-Haut Vin Doux Naturel Grenache (Rivesaltes)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Glenora 2015 Dry Ros\u00e9 (Finger Lakes)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Cellers Uni\u00f3 2015 Clos Dalian Crianza Grenache (Terra Alta)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Marimar Estate 2013 Mas Cavalls Do\u00f1a Margarita Vineyard Pinot Noir (Sonoma Coast)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Marrenon 2014 Orca Vieilles Vignes Grenache (Ventoux)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Valtosca 2004 Syrah (Jumilla)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Finca Albret 2011 Reserva Red (Navarra)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Guerrieri Rizzardi 2007 Pojega  (Valpolicella Classico Superiore Ripasso)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Cave du Vin Blanc de Morgex et de la Salle 2011 Extreme Metodo Classico Pri\u00e9 Blanc (Valle d'Aosta)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Neumeister 2013 Steirische Klassik Sauvignon Blanc (S\u00fcdoststeiermark)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Neumeister 2013 Steirische Klassik Sauvignon Blanc (S\u00fcdoststeiermark)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Skoff 2014 Kranachberg Sauvignon Blanc (Steiermark)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Cave du Vin Blanc de Morgex et de la Salle 2013 Vini Estremi Blanc de Morgex e de La Salle Pri\u00e9 Blanc (Valle d'Aosta)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Prieler 2011 Pinot Blanc (Leithaberg)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Prieler 2011 Pinot Blanc (Leithaberg)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Wittmann 2015 100 Hills Dry Pinot Blanc (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Th\u00f6rle 2011 Saulheimer H\u00f6lle Trockenbeerenauslese Riesling (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Wittmann 2014 100 Hills Dry Pinot Blanc (Rheinhessen)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ]
+        },
+        {
+            "query": "An Argentinan Malbec with herbal notes",
+            "baseline": [
+                {
+                    "title": "Vino z Czech 2011 Rivaner (Moravia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Felix Lavaque 2009 Felix Malbec (Cafayate)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "title": "Gravner 2007 Bianco Breg White (Venezia Giulia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Campolargo 2012 Alvarelh\u00e3o (Portuguese Table Wine)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Winkler-Hermaden 2007 Steierische Klassik Weissburgunder (S\u00fcdoststeiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Castle Rock 2010 Chardonnay (Russian River Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Sattlerhof 2014 Gamlitzer Morillon (S\u00fcdsteiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Pio Cesare 2008 Cortese di Gavi  (Cortese di Gavi)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Ferrandes 2004  Passito di Pantelleria",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Luis Segundo Correas 2013 Valle Las Acequias Malbec (Mendoza)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "3"
+                }
+            ],
+            "model": [
+                {
+                    "title": "The Infinite Monkey Theorem 2013 Malbec (Colorado)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "The Infinite Monkey Theorem 2013 Malbec (Colorado)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Michel Torino 2011 Ciclos Malbec-Merlot (Cafayate)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Intipalka 2012 Valle del Sol Reserva Malbec-Merlot (Ica)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Verum 2010 Reserva Malbec (Alto Valle del R\u00edo Negro)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Paladin 2004 Malbech Gli Aceri Malbec (Delle Venezie)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Trinchero 2012 Haystack Vineyard Malbec (Atlas Peak)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Keating 2011 Malbec (Rockpile)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Season 2012 Malbec (Southern Oregon)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Season 2011 Malbec (Southern Oregon)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "a sweet wine from spain or italy",
+            "baseline": [
+                {
+                    "title": "Bocopa 2014 Marina Alta Gran Selecci\u00f3n Blanco Moscatel de Alejandr\u00eda (Alicante)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Jorge Ord\u00f3\u00f1ez & Co. 2008 Selecci\u00f3n Especial 1 Moscatel (M\u00e1laga)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "title": "Albada 2014 Vi\u00f1as Viejas Macabeo (Calatayud)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Torres 2006 Vi\u00f1a Esmeralda Moscatel (Catalunya)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Tasca d'Almerita 2009 Tenuta Regaleali Chardonnay (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Asensio 2006 Miguel Asensio Vino Dulce de Moscatel Moscatel (Spain)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Navarro NV Pedro Xim\u00e9nez (Montilla-Moriles)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "title": "Woodinville Wine Cellars 2009 Little Bear Creek Red Red (Columbia Valley (WA))",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Tselepos 2015 Moschofilero (Mantinia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Terlan 2014 Vorberg Riserva Pinot Bianco (Alto Adige)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Statti 2006 Greco (Lamezia)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Alvear 2004 A\u00f1ada Pedro Xim\u00e9nez (Montilla-Moriles)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "title": "Telmo Rodr\u00edguez 2012 MR Mountain Wine Moscatel (M\u00e1laga)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Alvear NV Solera 1927 Pedro Xim\u00e9nez (Montilla-Moriles)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Santa Lucia 2010 Gazza Ladra Fiano (Puglia)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Villa Matilde 2007 Rocca dei Leoni Falanghina (Campania)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Jorge Ord\u00f3\u00f1ez & Co. 2011 Old Vines 3 Moscatel (M\u00e1laga)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "title": "Tenuta La Marchesa 2015 Gold Label  (Gavi)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Tenuta La Marchesa 2015 Gold Label  (Gavi)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Finca Jakue 2016 Txakolina Hondarrabi Zuri (Getariako Txakolina)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "a sour wine from spain or italy",
+            "baseline": [
+                {
+                    "title": "Albert Bichot 2014 Domaine Ad\u00e9lie Le Champs-Martin Premier Cru  (Mercurey)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Albet I Noya 2011 Brut Natural Reserva Sparkling (Pened\u00e8s)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Mont Tauch 2009 Le Dog de Christophe Cabernet Sauvignon (Vin de Pays d'Oc)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Albet I Noya 2015 3 Macabeus Macabeo (Pened\u00e8s)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Bovale 2014 Bobal (Utiel-Requena)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Bocopa 2015 Marina Alta Moscatel de Alejandr\u00eda (Alicante)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Gilligan 2005 Shiraz-Grenache-Mourv\u00e8dre G-S-M (McLaren Vale)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Torres 2000 Vi\u00f1a Sol Paralleda (Pened\u00e8s)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "3"
+                },
+                {
+                    "title": "Bodegas Tob\u00eda 2009 Selecci\u00f3n Crianza  (Rioja)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "3"
+                },
+                {
+                    "title": "Albet I Noya 2014 XA Xarel-lo (Pened\u00e8s)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Vi\u00f1a Santa Marina 2012 Merlot Rosado (Extremadura)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Terra do Castelo 2014 Godello (Ribeiro)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Osborne NV Medium Golden Sherry (Jerez)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Osborne NV Cream Sherry (Jerez)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Hidalgo NV Gobernador Oloroso Seco Palomino (Jerez)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Osborne NV Cream Sherry (Jerez)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Harveys NV Orange Ap\u00e9ritif Sherry (Jerez)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Gonz\u00e1lez Byass NV Nectar Dulce Pedro Xim\u00e9nez (Jerez)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Hidalgo NV Vino Dulce Natural Pedro Xim\u00e9nez (Jerez)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Harveys NV Fino Light Sherry (Jerez)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "A unique wine for a special occasion",
+            "baseline": [
+                {
+                    "title": "Domaine Marcel Deiss 2012 Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Domaine Gresser 2013 Kritt Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Citation 2004 Pinot Noir (Oregon)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Dr. H. Thanisch (Erben M\u00fcller-Burggraef) 2013 Brauneberger Juffer-Sonnenuhr Sp\u00e4tlese Riesling (Mosel)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Domaine Riefl\u00e9-Landmann 2013 Seppi Landmann Vall\u00e9e Noble Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Domaine Ehrhart 2013 Domaine Saint-R\u00e9my Herrenweg Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Dalton 2012 Oak Aged Cabernet Sauvignon (Galilee)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Cusumano 2012 S\u00e0gana Tenuta San Giacomo Nero d'Avola (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "COS 2013 Frappato (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Caves Transmontanas 2006 V\u00e9rtice Pinot Noir (Douro)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "3"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Cave Geisse NV Cave Amadeu Moscatel (Pinto Bandeira)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Enjingi 2009 Barrique Zweigelt (Kutjevo)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Bolney Wine Estate 2014 Blanc de Blancs Brut Chardonnay (England)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Bolney Wine Estate 2014 Blanc de Blancs Brut Chardonnay (England)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "L.A. Cetto 2011 Estate Bottled Chardonnay (Valle de Guadalupe)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "L.A. Cetto 2000 Private Reserve Chardonnay (Valle de Guadalupe)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Telavi 2009 Satrapezo 10 Qvevri Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "title": "Vino z Czech 2011 Welschriesling (Moravia)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "L.A. Cetto 1996 Private Reserve Cabernet Sauvignon (Valle de Guadalupe)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Gusbourne Estate 2013 Blanc de Blancs Chardonnay (England)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "3"
+                }
+            ]
+        },
+        {
+            "query": "A brazilian wine with good feel and Lime flavor",
+            "baseline": [
+                {
+                    "title": "Domaine Marcel Deiss 2012 Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Domaine Gresser 2013 Kritt Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Citation 2004 Pinot Noir (Oregon)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Dr. H. Thanisch (Erben M\u00fcller-Burggraef) 2013 Brauneberger Juffer-Sonnenuhr Sp\u00e4tlese Riesling (Mosel)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Domaine Riefl\u00e9-Landmann 2013 Seppi Landmann Vall\u00e9e Noble Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Domaine Ehrhart 2013 Domaine Saint-R\u00e9my Herrenweg Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Dalton 2012 Oak Aged Cabernet Sauvignon (Galilee)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Cusumano 2012 S\u00e0gana Tenuta San Giacomo Nero d'Avola (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "COS 2013 Frappato (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Caves Transmontanas 2006 V\u00e9rtice Pinot Noir (Douro)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Cave Geisse NV Cave Amadeu Moscatel (Pinto Bandeira)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Vino z Czech 2011 Welschriesling (Moravia)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Telavi 2009 Satrapezo 10 Qvevri Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Budureasca 2016 Vine in Flames Feteasc\u01ce Regal\u01ce (Dealu Mare)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Kindzmarauli Marani 2014 Kisi (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Zlatan Otok 2012 Vrhunsko Bijelo Vino Posip (Hvar)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Chamlija 2015 Blanc de Noirs Papaskarasi (Thrace)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Pheasant's Tears 2009 Dry Unfiltered Amber Wine Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Turasan 2014 Emir (Turkey)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Turasan 2014 Emir (Turkey)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ]
+        },
+        {
+            "query": "a good austrian Grauburgunder withrich flavour",
+            "baseline": [
+                {
+                    "title": "Tam\u00e1s Estates 1999 AVA's: San Francisco Bay/Livermore Valley Zinfandel (California)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Tzuba 2009 Metzuda Red (Judean Hills)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Tement 2015 Steirische Klassik Weissburgunder (S\u00fcdsteiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Montemercurio 2009 Messaggero  (Vino Nobile di Montepulciano)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "St. Urbans-Hof 2012 Ockfener Bockstein Erste Lage Sp\u00e4tlese Riesling (Mosel)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Neumeister 2014 Steirische Klassik Grauburgunder (S\u00fcdoststeiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Weingut Christ 2015 Gelber Muskateller (Vienna)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Netzl 2013 B\u00e4rnreiser Weissburgunder (Carnuntum)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Netzl 2013 B\u00e4rnreiser Weissburgunder (Carnuntum)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Neumeister 2013 Steirische Klassik Morillon (S\u00fcdoststeiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Netzl 2014 Rubin Carnuntum Zweigelt (Carnuntum)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Neumeister 2011 Steintal Roter Traminer (S\u00fcdoststeiermark)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Lackner Tinnacher 2011 Gelber Muskateller (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Wohlmuth 2014 Steinriegl Gelber Muskateller (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Neumeister 2011 Steirische Klassik Grauburgunder (S\u00fcdoststeiermark)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Lackner Tinnacher 2014 Welschriesling (S\u00fcdsteiermark)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Biegler 2015 Brindlbach Rotgipfler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Stadlmann 2009 Tagelsteiner Rotgipfler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Kracher NV Zwischen den Seen Nummer 3 Kollektion L08A Rosenmuskateller (Austria)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Johanneshof Reinisch 2015 Satzing Zierfandler (Thermenregion)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "a simple primitivo",
+            "baseline": [
+                {
+                    "title": "Antonio Caggiano 2007 FiaGre White (Campania)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Cielo e Terra 2011 Primi Soli Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "title": "A-Mano 2009 Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Miguel Torres 2009 Nectaria Vendimia Tardia Botrytis Riesling (Curic\u00f3 Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Grandin NV Brut Sparkling (Vin Mousseux)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Fatalone 2007 Teres Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Tommasi 2012 Masseria Surani Heracles Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Teanum 2012 Otre Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Torrevento 2012 Matervitae Primitivo (Puglia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "3"
+                },
+                {
+                    "title": "Villa Toscano 2011 White Barbera (Shenandoah Valley (CA))",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Cave Geisse NV Cave Amadeu Moscatel (Pinto Bandeira)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Enjingi 2009 Barrique Zweigelt (Kutjevo)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Vino z Czech 2011 Welschriesling (Moravia)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Telavi 2009 Satrapezo 10 Qvevri Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Bending Branch 2015 Comfortage Hoover Valley Vineyard Roussanne",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Bending Branch 2015 Comfortage Hoover Valley Vineyard Roussanne",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Chamlija 2015 Blanc de Noirs Papaskarasi (Thrace)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Kindzmarauli Marani 2014 Kisi (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Pheasant's Tears 2009 Dry Unfiltered Amber Wine Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Budureasca 2016 Vine in Flames Feteasc\u01ce Regal\u01ce (Dealu Mare)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ]
+        },
+        {
+            "query": "A classic wine for a feast that has a lot of meats and heavy food",
+            "baseline": [
+                {
+                    "title": "Domaine Marcel Deiss 2012 Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Domaine Gresser 2013 Kritt Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Citation 2004 Pinot Noir (Oregon)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Dr. H. Thanisch (Erben M\u00fcller-Burggraef) 2013 Brauneberger Juffer-Sonnenuhr Sp\u00e4tlese Riesling (Mosel)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Domaine Riefl\u00e9-Landmann 2013 Seppi Landmann Vall\u00e9e Noble Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Domaine Ehrhart 2013 Domaine Saint-R\u00e9my Herrenweg Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "1"
+                },
+                {
+                    "title": "Dalton 2012 Oak Aged Cabernet Sauvignon (Galilee)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "1"
+                },
+                {
+                    "title": "Cusumano 2012 S\u00e0gana Tenuta San Giacomo Nero d'Avola (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "COS 2013 Frappato (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Caves Transmontanas 2006 V\u00e9rtice Pinot Noir (Douro)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Cave Geisse NV Cave Amadeu Moscatel (Pinto Bandeira)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Vino z Czech 2011 Welschriesling (Moravia)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Telavi 2009 Satrapezo 10 Qvevri Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Budureasca 2016 Vine in Flames Feteasc\u01ce Regal\u01ce (Dealu Mare)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Kindzmarauli Marani 2014 Kisi (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Zlatan Otok 2012 Vrhunsko Bijelo Vino Posip (Hvar)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Chamlija 2015 Blanc de Noirs Papaskarasi (Thrace)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "title": "Pheasant's Tears 2009 Dry Unfiltered Amber Wine Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "3"
+                },
+                {
+                    "title": "Turasan 2014 Emir (Turkey)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Turasan 2014 Emir (Turkey)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "an exquisite wine from the USA",
+            "baseline": [
+                {
+                    "title": "Urban Legend 2010 Holland Landing Vineyard Teroldego (Clarksburg)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Michaud 2015 Marsanne (Chalone)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "title": "Heringer 2012 Estate Bottled Teroldego (Clarksburg)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "West of Temperance 2013 Heringer Estate Vineyard Teroldego (Clarksburg)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Chaddsford 2007 Ros\u00e9 Chambourcin (Pennsylvania)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "1"
+                },
+                {
+                    "title": "Epiphany 2013 Rodney's Vineyard Petite Sirah (Santa Barbara County)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Blue Reef 2007 Shiraz-Cabernet Sauvignon (South Eastern Australia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Bloomfield 2008 Chardonnay (Contra Costa County)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Ste. Chapelle 2001 Johannisberg Riesling (Idaho)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Calera 2011 Aligot\u00e9 (Mt. Harlan)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Les Bourgeois 2010 Collector's Series Chambourcin (Missouri)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "2"
+                },
+                {
+                    "title": "Winery by the Creek 2014 Estate Semillon (Fair Play)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Hawthorne 2014 Barrel Reserve Auxerrois (Old Mission Peninsula)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Arizona Stronghold 2010 Bonita Springs Vineyard Site Archive Mourv\u00e8dre (America)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Bending Branch 2015 Comfortage Hoover Valley Vineyard Roussanne",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Bending Branch 2015 Comfortage Hoover Valley Vineyard Roussanne",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Lovingston 2014 Gilbert's Vineyard Pinotage (Monticello)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Pollak 2012 Estate Grown Meritage (Monticello)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "2"
+                },
+                {
+                    "title": "Lovingston 2011 Unoaked Chardonnay (Monticello)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "LangeTwins 2015 Estate Grown Chardonnay (Clarksburg)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "an earthy wine with sweet notes from france",
+            "baseline": [
+                {
+                    "title": "Vino z Czech 2011 Rivaner (Moravia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "1"
+                },
+                {
+                    "title": "Marrenon 2014 Les Grains Ros\u00e9 de Merlot (Mediterran\u00e9e)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "3"
+                },
+                {
+                    "title": "Gravner 2007 Bianco Breg White (Venezia Giulia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "1"
+                },
+                {
+                    "title": "Lionel Osmin & Cie 2012  Marcillac",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "3"
+                },
+                {
+                    "title": "Simonnet-Febvre 2014 Quintessence de Lyre ",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Campolargo 2012 Alvarelh\u00e3o (Portuguese Table Wine)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "M. Chapoutier 2010 Les Meysonniers Marsanne (Crozes-Hermitage)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Winkler-Hermaden 2007 Steierische Klassik Weissburgunder (S\u00fcdoststeiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Castle Rock 2010 Chardonnay (Russian River Valley)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Sattlerhof 2014 Gamlitzer Morillon (S\u00fcdsteiermark)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Clos Teddi 2008 Nielluciu (Patrimonio)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Clos Alivu 2016 Vermentino (Patrimonio)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Vignobles La Coterie 2006 Balma Venitia  (Muscat de Beaumes de Venise)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "2"
+                },
+                {
+                    "title": "Turasan 2014 Misket (Cappadocia)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Mas des Bressades 2015 Cuv\u00e9e Tradition Syrah-Grenache (Costi\u00e8res de N\u00eemes)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "3"
+                },
+                {
+                    "title": "Fr\u00e9d\u00e9ric Lornet 2005 Vin Jaune Savagnin (Arbois)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "2"
+                },
+                {
+                    "title": "Familia Deicas 2015 Deicas Mar de Piedras Vineyard Tannat (Uruguay)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Telavi 2008 Satrapezo Saperavi (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Telavi 2008 Satrapezo Saperavi (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Cave des Producteurs de Juran\u00e7on 2012 Les Terrasses Vendanges Tardives  (Juran\u00e7on)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "2"
+                }
+            ]
+        },
+        {
+            "query": "a well balanced wine with lemon notes from spain",
+            "baseline": [
+                {
+                    "title": "Bocopa 2015 Marina Alta Moscatel de Alejandr\u00eda (Alicante)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Enrique Mendoza 2011 Moscatel de la Marina Moscatel (Alicante)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "2"
+                },
+                {
+                    "title": "Pluvium 2016 Bobal-Grenache Rosado (Valencia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Gilligan 2005 Shiraz-Grenache-Mourv\u00e8dre G-S-M (McLaren Vale)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "0"
+                },
+                {
+                    "title": "Albet I Noya 2011 Brut Natural Reserva Sparkling (Pened\u00e8s)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Ren\u00e9 Sparr 2011 Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Bodegas Langa 2012 Pieza el Caidero Grenache (Calatayud)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Zudugarai 2015 Hondarrabi Zuri (Getariako Txakolina)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "1"
+                },
+                {
+                    "title": "Vidigal 2013 Red (Lisboa)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "1"
+                },
+                {
+                    "title": "Albert Bichot 2014 Domaine Ad\u00e9lie Le Champs-Martin Premier Cru  (Mercurey)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Terra do Castelo 2014 Godello (Ribeiro)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "3"
+                },
+                {
+                    "title": "Vi\u00f1a Santa Marina 2012 Merlot Rosado (Extremadura)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "1"
+                },
+                {
+                    "title": "Alvear NV Solera 1927 Pedro Xim\u00e9nez (Montilla-Moriles)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "3"
+                },
+                {
+                    "title": "Alvear NV Carlos VII Amontillado - 500 ml Pedro Xim\u00e9nez (Montilla-Moriles)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "2"
+                },
+                {
+                    "title": "Alvear NV Amontillado Carlos VII Pedro Xim\u00e9nez (Montilla-Moriles)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "2"
+                },
+                {
+                    "title": "Telmo Rodr\u00edguez 2013 Mountain Blanc Moscatel de Alejandr\u00eda (M\u00e1laga)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "3"
+                },
+                {
+                    "title": "Albet I Noya 2012 Xa Made with Organic Grapes Xarel-lo (Pened\u00e8s)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "2"
+                },
+                {
+                    "title": "Daniel Belda 2014 Verdil (Valencia)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "3"
+                },
+                {
+                    "title": "Anecoop NV Flare M\u00e9todo Charmat Moscatel (Valencia)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "2"
+                },
+                {
+                    "title": "Vins El Cep 2015 GR5 Senders Xarel-lo (Pened\u00e8s)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "1"
+                }
+            ]
+        },
+        {
+            "query": "a wine from turkey that is well rounded and has peach notes",
+            "baseline": [
+                {
+                    "title": "Domaine Marcel Deiss 2012 Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Domaine Gresser 2013 Kritt Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Citation 2004 Pinot Noir (Oregon)",
+                    "model": "tf-idf_baseline",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Dr. H. Thanisch (Erben M\u00fcller-Burggraef) 2013 Brauneberger Juffer-Sonnenuhr Sp\u00e4tlese Riesling (Mosel)",
+                    "model": "tf-idf_baseline",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Domaine Riefl\u00e9-Landmann 2013 Seppi Landmann Vall\u00e9e Noble Pinot Gris (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Domaine Ehrhart 2013 Domaine Saint-R\u00e9my Herrenweg Gewurztraminer (Alsace)",
+                    "model": "tf-idf_baseline",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Dalton 2012 Oak Aged Cabernet Sauvignon (Galilee)",
+                    "model": "tf-idf_baseline",
+                    "rank": 7,
+                    "score": "0"
+                },
+                {
+                    "title": "Cusumano 2012 S\u00e0gana Tenuta San Giacomo Nero d'Avola (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "COS 2013 Frappato (Sicilia)",
+                    "model": "tf-idf_baseline",
+                    "rank": 9,
+                    "score": "0"
+                },
+                {
+                    "title": "Caves Transmontanas 2006 V\u00e9rtice Pinot Noir (Douro)",
+                    "model": "tf-idf_baseline",
+                    "rank": 10,
+                    "score": "0"
+                }
+            ],
+            "model": [
+                {
+                    "title": "Cave Geisse NV Cave Amadeu Moscatel (Pinto Bandeira)",
+                    "model": "neural_network",
+                    "rank": 1,
+                    "score": "0"
+                },
+                {
+                    "title": "Vino z Czech 2011 Welschriesling (Moravia)",
+                    "model": "neural_network",
+                    "rank": 2,
+                    "score": "0"
+                },
+                {
+                    "title": "Telavi 2009 Satrapezo 10 Qvevri Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 3,
+                    "score": "0"
+                },
+                {
+                    "title": "Budureasca 2016 Vine in Flames Feteasc\u01ce Regal\u01ce (Dealu Mare)",
+                    "model": "neural_network",
+                    "rank": 4,
+                    "score": "1"
+                },
+                {
+                    "title": "Kindzmarauli Marani 2014 Kisi (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 5,
+                    "score": "0"
+                },
+                {
+                    "title": "Zlatan Otok 2012 Vrhunsko Bijelo Vino Posip (Hvar)",
+                    "model": "neural_network",
+                    "rank": 6,
+                    "score": "0"
+                },
+                {
+                    "title": "Chamlija 2015 Blanc de Noirs Papaskarasi (Thrace)",
+                    "model": "neural_network",
+                    "rank": 7,
+                    "score": "3"
+                },
+                {
+                    "title": "Pheasant's Tears 2009 Dry Unfiltered Amber Wine Rkatsiteli (Kakheti)",
+                    "model": "neural_network",
+                    "rank": 8,
+                    "score": "0"
+                },
+                {
+                    "title": "Turasan 2014 Emir (Turkey)",
+                    "model": "neural_network",
+                    "rank": 9,
+                    "score": "3"
+                },
+                {
+                    "title": "Turasan 2014 Emir (Turkey)",
+                    "model": "neural_network",
+                    "rank": 10,
+                    "score": "3"
+                }
+            ]
+        }
+    ]
+}
