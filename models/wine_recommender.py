@@ -72,7 +72,7 @@ def load_data(hidden_dim=512, output_dim=64):
     print(f"Loaded vectorizer with {len(vectorizer.get_feature_names_out())} features")
 
     # Try to load trained neural network
-    trained_model_path = Path(__file__).parent / "trained" / "wine_nn_model.pkl"
+    trained_model_path = Path(__file__).parent / "trained" / "wine_nn_model.pt"
     print(f"Loading trained model from {trained_model_path}")
     if trained_model_path.exists():
         nn_model = WineRecommenderNN(
