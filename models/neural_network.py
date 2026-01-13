@@ -19,7 +19,9 @@ class WineRecommenderNN(nn.Module):
     Creates low-dimensional embeddings from high-dimensional wine features
     """
 
-    def __init__(self, input_dim, hidden_dim=512, output_dim=64):
+    def __init__(
+        self, input_dim, hidden_dim=512, output_dim=64, preferred_device="cuda"
+    ):
         """
         Initialize the neural network
 
@@ -27,6 +29,7 @@ class WineRecommenderNN(nn.Module):
             input_dim (int): Dimension of input features (TF-IDF vector size)
             hidden_dim (int): Dimension of hidden layer
             output_dim (int): Dimension of output embeddings
+            preferred_device (str): Preferred device ("cuda" or "cpu"), defaults to "cuda"
         """
         super(WineRecommenderNN, self).__init__()
 
@@ -65,7 +68,14 @@ class WineRecommenderNN(nn.Module):
             nn.Linear(hidden_dim, input_dim),
         )
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # Set device based on preference and availability
+        if preferred_device == "cuda" and torch.cuda.is_available():
+            self.device = torch.device("cuda")
+        else:
+            self.device = torch.device("cpu")
+            if preferred_device == "cuda":
+                print(f"Warning: CUDA requested but not available, falling back to CPU")
+
         print(f"Using device: {self.device}")
         self.to(self.device)
 
