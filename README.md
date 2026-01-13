@@ -81,7 +81,28 @@ Training configuration:
 
 Trained model weights are saved to `models/trained/512-384-256-64/`.
 
-### 3. Scoring and Evaluation
+### 3. Running the Web Application
+
+Start the Flask web server:
+```bash
+python app.py [OPTIONS]
+```
+
+Available options:
+- `--cpu` - Run Flask app using CPU only
+- `--debug` - Run Flask app in debug mode
+
+Examples:
+```bash
+python app.py                    # Run with CUDA (if available) 
+python app.py --cpu              # Run with CPU only
+python app.py --debug            # Run with CUDA in debug mode
+python app.py --cpu --debug      # Run with CPU in debug mode
+```
+
+The application will be available at `http://localhost:5000`
+
+### 4. Scoring and Evaluation
 
 
 Run the scoring interface to generate recommendations:
