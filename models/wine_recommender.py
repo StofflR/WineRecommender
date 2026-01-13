@@ -32,8 +32,14 @@ unique_wineries = []
 normalized_unique_wineries = []
 
 
-def load_data(hidden_dim=512, output_dim=64):
-    """Load preprocessed data from models/data directory"""
+def load_data(hidden_dim=512, output_dim=64, device="cuda"):
+    """Load preprocessed data from models/data directory
+
+    Args:
+        hidden_dim (int): Hidden dimension for neural network
+        output_dim (int): Output dimension for neural network
+        device (str): Preferred device ("cuda" or "cpu"), defaults to "cuda"
+    """
     global df_wines, feature_vectors, vectorizer, nn_model, wine_embeddings
     global unique_varieties, normalized_unique_varieties
     global unique_regions, normalized_unique_regions
@@ -79,6 +85,7 @@ def load_data(hidden_dim=512, output_dim=64):
             input_dim=feature_vectors.shape[1],
             hidden_dim=hidden_dim,
             output_dim=output_dim,
+            preferred_device=device,
         )
         nn_model.load_model(str(trained_model_path))
 
@@ -230,19 +237,20 @@ def extract_flavor_features(text_input):
     return " ".join(flavor_terms)
 
 
-def get_wine_recommendations(text_input, top_n=7):
+def get_wine_recommendations(text_input, top_n=7, device="cuda"):
     """
     Generate wine recommendations based on user input
 
     Args:
         text_input (str): User's input text for wine preferences
         top_n (int): Number of recommendations to return
+        device (str): Preferred device ("cuda" or "cpu"), defaults to "cuda"
 
     Returns:
         list: List of wine dictionaries with rank, name, description, country, and price
     """
     if df_wines is None or feature_vectors is None:
-        load_data()
+        load_data(device=device)
 
     # Get user input vector
     user_vector = get_user_input_tfidf(text_input)
