@@ -32,13 +32,14 @@ unique_wineries = []
 normalized_unique_wineries = []
 
 
-def load_data(hidden_dim=512, output_dim=64, device="cuda"):
+def load_data(hidden_dim=512, output_dim=64, device="cuda", use_nn=True):
     """Load preprocessed data from models/data directory
 
     Args:
         hidden_dim (int): Hidden dimension for neural network
         output_dim (int): Output dimension for neural network
         device (str): Preferred device ("cuda" or "cpu"), defaults to "cuda"
+        use_nn (bool): Whether to load the neural network model, defaults to True
     """
     global df_wines, feature_vectors, vectorizer, nn_model, wine_embeddings
     global unique_varieties, normalized_unique_varieties
@@ -77,7 +78,13 @@ def load_data(hidden_dim=512, output_dim=64, device="cuda"):
         vectorizer = pickle.load(f)
     print(f"Loaded vectorizer with {len(vectorizer.get_feature_names_out())} features")
 
-    # Try to load trained neural network
+    # Try to load trained neural network if use_nn is True
+    if not use_nn:
+        print("Neural network disabled. Using TF-IDF similarity only.")
+        nn_model = None
+        wine_embeddings = None
+        return
+
     trained_model_path = Path(__file__).parent / "trained" / "wine_nn_model.pt"
     print(f"Loading trained model from {trained_model_path}")
     if trained_model_path.exists():
@@ -251,7 +258,7 @@ def get_wine_recommendations(text_input, top_n=7, device="cuda", use_nn=True):
         list: List of wine dictionaries with rank, name, description, country, and price
     """
     if df_wines is None or feature_vectors is None:
-        load_data(device=device)
+        load_data(device=device, use_nn=use_nn)
 
     # Get user input vector
     user_vector = get_user_input_tfidf(text_input)
