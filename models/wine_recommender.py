@@ -237,7 +237,7 @@ def extract_flavor_features(text_input):
     return " ".join(flavor_terms)
 
 
-def get_wine_recommendations(text_input, top_n=7, device="cuda"):
+def get_wine_recommendations(text_input, top_n=7, device="cuda", use_nn=True):
     """
     Generate wine recommendations based on user input
 
@@ -245,6 +245,7 @@ def get_wine_recommendations(text_input, top_n=7, device="cuda"):
         text_input (str): User's input text for wine preferences
         top_n (int): Number of recommendations to return
         device (str): Preferred device ("cuda" or "cpu"), defaults to "cuda"
+        use_nn (bool): Whether to use neural network embeddings or fall back to TF-IDF, defaults to True
 
     Returns:
         list: List of wine dictionaries with rank, name, description, country, and price
@@ -256,7 +257,7 @@ def get_wine_recommendations(text_input, top_n=7, device="cuda"):
     user_vector = get_user_input_tfidf(text_input)
 
     # Calculate similarities
-    if nn_model is not None and wine_embeddings is not None:
+    if use_nn and nn_model is not None and wine_embeddings is not None:
         # Use neural network embeddings
         user_embedding = nn_model.get_embeddings(user_vector)
         similarities = cosine_similarity(user_embedding, wine_embeddings)[0]
